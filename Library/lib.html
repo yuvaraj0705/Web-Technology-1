@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" type="text/css" href="lib2.css">
+</head>
+<body>
+    <h2 class="main-title">Online Library</h2>
+    <div class="sidebar">
+        <form id="bookForm">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author" required><br>
+            <label for="year">Year:</label><br>
+            <input type="text" id="year" name="year" required><br>
+            <label for="publisher">Publisher:</label><br>
+            <input type="text" id="publisher" name="publisher" required><br>
+            <label for="category">Category:</label><br>
+            <input type="text" id="category" name="category" required><br>
+        </form>
+        <button type="button" id="submitButton">Submit</button>
+    </div>
+    
+
+    <h2 class="main-title">Books List</h2>
+    <table id="booksTable">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Publisher</th>
+            <th>Category</th>
+        </tr>
+    </table>
+
+    <script src="lib1.js"></script>
+</body>
+</html>
