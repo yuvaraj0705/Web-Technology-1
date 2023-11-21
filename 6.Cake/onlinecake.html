@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Cake Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Online Cake Order</h1>
+
+    <form action="order_confirmation.html" method="post">
+        <label for="cakeType">Select Cake Type:</label>
+        <select id="cakeType" name="cakeType" required>
+            <option value="chocolate">Chocolate Cake</option>
+            <option value="vanilla">Vanilla Cake</option>
+            <option value="strawberry">Strawberry Cake</option>
+            <!-- Add more cake types as needed -->
+        </select>
+
+        <label for="size">Select Cake Size:</label>
+        <select id="size" name="size" required>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <label for="deliveryDate">Select Delivery Date:</label>
+        <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+        <label for="message">Add a Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
+
+        <label for="customerName">Your Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit"><a href="cake.html">Proceed to Checkout</a></p></button>
+        <p class="message">Not registered? <a href="cake.html">Create an account</a></p>
+    </form>
+</body>
+
+</html>
