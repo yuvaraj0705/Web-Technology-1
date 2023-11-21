@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hospital Appointment Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Online Hospital Appointment Booking</h1>
+
+    <form id="appointmentForm">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor" required>
+            <option value="drSmith">Dr. Smith</option>
+            <option value="drJohnson">Dr. Johnson</option>
+            <!-- Add more doctors as needed -->
+        </select>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <input type="submit" value="Book Appointment">
+    </form>
+
+    <script>
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Here you would typically send the form data to the server for processing.
+            // This example just logs the data to the console.
+            var formData = new FormData(event.target);
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
+            }
+
+            alert("Appointment booked successfully!"); // You can replace this with a more sophisticated message or redirect the user.
+        });
+    </script>
+
+</body>
+</html>
